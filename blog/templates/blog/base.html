@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="https://shubhamvyas.com/images/circle-cropped-bw.webp">
+  <link rel="icon" type="image/png" href="https://shubhamvyas.com/images/circle-cropped-bw.webp">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Shubham Vyas
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  
+  <link href="{% static 'blog/material-kit.css' %}" rel="stylesheet" />
+  <link href="{% static 'blog/index.css' %}" rel="stylesheet" />
+
+  <!--   Core JS Files   -->
+  <!-- JS FILES -->
+  
+  <script src=" {% static 'blog/js/core/jquery.min.js' %}" type="text/javascript"></script>
+  
+  <script src=" {% static 'blog/js/core/popper.min.js' %}" type="text/javascript"></script>
+  
+  <script src=" {% static 'blog/js/core/bootstrap-material-design.min.js' %}" type="text/javascript"></script>
+  
+  <script src=" {% static 'blog/js/plugins/moment.min.js' %}" type="text/javascript"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  
+  <script src=" {% static 'blog/js/plugins/nouislider.min.js' %}" type="text/javascript"></script>
+  <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+  
+  <script src=" {% static 'blog/js/material-kit.js' %}" type="text/javascript"></script>
+
+
+  {{ form.media }}
+
+
+</head>
+
+<body class="index-page sidebar-collapse">
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="https://shubhamvyas.com">
+          Shubham Vyas </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{% url 'website_home' %}">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{% url 'profile' %}">
+              Profile
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{% url 'blog_index' %}">
+              Blog
+            </a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+        {% block content %}
+        {% endblock %}
+  <!--  End Modal -->
+  <footer class="footer" data-background-color="black">
+    <div class="container">
+     <a>VYAS</a>
+  </footer>
+  
+ 
+</body>
+
+</html>

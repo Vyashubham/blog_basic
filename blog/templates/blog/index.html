@@ -1,0 +1,46 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="page-header header-filter clear-filter white-filter" ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto">
+        <div class="brand">
+          <div class="">
+            <img class="profile_pic" src="https://shubhamvyas.com/images/circle-cropped-bw.webp" alt="">
+          </div>
+          <h1>HI! I'm Shubham.</h1>
+          <h3>Alright, be calm and start working.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main main-raised">
+  <div class="section section-basic">
+    <div class="container">
+      <div>
+        <h2 class="brand">Latest Post</h2>
+      </div>
+      {% for post in posts|slice:":1" %}
+      <a href="{% url 'post_detail_view' post.slug %}">
+          <div class="card card-nav-tabs text-center">  
+              <div class="card-body">
+                <h4 class="card-title">{{ post.Title|safe }}</h4>
+                <p class="card-text">{{ post.Content|safe|truncatewords:50 }}</p>
+                
+              </div>
+              <div class="card-footer text-muted">
+                {{ post.Date|date:'M d, Y'|safe }}
+              </div>
+            </div>
+      </a>
+        
+  {% endfor %}
+  
+            
+  
+    </div>
+  </div>
+</div>
+{% endblock content %}
